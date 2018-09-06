@@ -65,7 +65,7 @@ if __name__ == '__main__':
     status_port = thisPROFILE['status_server'][1]
     distributor_key = thisPROFILE['distributor_key']
     receiver_key = thisPROFILE['receiver_key']
-    sto_prefix = 'yl-crawl_' + thisPROFILE['storage_name_filter']
+    sto_prefix = 'crawl_job_' + thisPROFILE['storage_name_filter']
     if start_gcloud_worker:
         vm_prefix = 'dp-crawler-' + thisPROFILE['vm_name_filter']
         if 'dp-crawler' not in vm_prefix:
