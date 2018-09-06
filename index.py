@@ -55,7 +55,7 @@ def main(chooseprofile, start_gcloud_worker):
                args=(distributor_port, distributor_key, job_queue, wait_dict, wait_lock)).start()
 
     mp.Process(target=storage_fetch.listen_to_stoage,
-               args=('crawl_job', job_queue, sto_prefix)).start()
+               args=('yl-crawl', job_queue, sto_prefix)).start()
 
     mp.Process(target=receiver.server_receiver,
                args=(receiver_port, receiver_key, global_counter, counter_lock, ret_dict, ret_lock)).start()

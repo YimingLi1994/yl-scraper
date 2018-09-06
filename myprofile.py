@@ -13,9 +13,9 @@ profile = {
         'speed_per_worker': 0.5,  # number of max scraping speed(n/s) per worker
     },
     'HA_scraping': {
-        'status_server': ['10.128.0.15', 20055],
-        'distributor_server': ['10.128.0.15', 20060],
-        'receiver_server': ['10.128.0.15', 20070],
+        'status_server': ['10.142.0.4', 20055],
+        'distributor_server': ['10.142.0.4', 20060],
+        'receiver_server': ['10.142.0.4', 20070],
         'vm_name_filter': 'ha-scraping',
         'storage_name_filter': 'HA_scraping',
         'start_up_script': 'ha_scraping.sh',
@@ -31,9 +31,9 @@ profile = {
         'vm_lifecycle': 25
     },
     'amazon_scraping': {
-        'status_server': ['10.128.0.15', 10055],
-        'distributor_server': ['10.128.0.15', 10060],
-        'receiver_server': ['10.128.0.15', 10070],
+        'status_server': ['10.142.0.4', 10055],
+        'distributor_server': ['10.142.0.4', 10060],
+        'receiver_server': ['10.142.0.4', 10070],
         'vm_name_filter': 'amazon-scraping',
         'storage_name_filter': 'amazon_scraping',
         'start_up_script': 'amazon_scraping.sh',
@@ -49,9 +49,9 @@ profile = {
         'vm_lifecycle': 25
     },
     'general_scraping': {
-        'status_server': ['10.128.0.15', 10013],
-        'distributor_server': ['10.128.0.15', 10014],
-        'receiver_server': ['10.128.0.15', 10015],
+        'status_server': ['10.142.0.4', 10013],
+        'distributor_server': ['10.142.0.4', 10014],
+        'receiver_server': ['10.142.0.4', 10015],
         'vm_name_filter': 'scraper-general',
         'storage_name_filter': 'scraper_general',
         'start_up_script': 'worker_general.sh',
@@ -67,9 +67,9 @@ profile = {
         'vm_lifecycle': 25
     },
     'slow_scraping': {
-        'status_server': ['10.128.0.15', 9013],
-        'distributor_server': ['10.128.0.15', 9014],
-        'receiver_server': ['10.128.0.15', 9015],
+        'status_server': ['10.142.0.4', 9013],
+        'distributor_server': ['10.142.0.4', 9014],
+        'receiver_server': ['10.142.0.4', 9015],
         'vm_name_filter': 'slow-scraping',
         'storage_name_filter': 'slow_scraping',
         'start_up_script': 'slow_scraping.sh',
@@ -85,9 +85,9 @@ profile = {
         'vm_lifecycle': 25
     },
     'amz_flash': {
-        'status_server': ['10.128.0.15', 9016],
-        'distributor_server': ['10.128.0.15', 9017],
-        'receiver_server': ['10.128.0.15', 9018],
+        'status_server': ['10.142.0.4', 9016],
+        'distributor_server': ['10.142.0.4', 9017],
+        'receiver_server': ['10.142.0.4', 9018],
         'vm_name_filter': 'amz-flash',
         'storage_name_filter': 'amz_flash',
         'start_up_script': 'amz_flash.sh',
@@ -103,9 +103,9 @@ profile = {
         'vm_lifecycle': 25
     },
     'site_map_walk': {
-        'status_server': ['10.128.0.15', 8016],
-        'distributor_server': ['10.128.0.15', 8017],
-        'receiver_server': ['10.128.0.15', 8018],
+        'status_server': ['10.142.0.4', 8016],
+        'distributor_server': ['10.142.0.4', 8017],
+        'receiver_server': ['10.142.0.4', 8018],
         'vm_name_filter': 'site-map',
         'storage_name_filter': 'site_map',
         'start_up_script': 'site_map.sh',
@@ -121,9 +121,9 @@ profile = {
         'vm_lifecycle': 25
     },
     'test_server': {
-        'status_server': ['10.128.0.15', 18016],
-        'distributor_server': ['10.128.0.15', 18017],
-        'receiver_server': ['10.128.0.15', 18018],
+        'status_server': ['10.142.0.4', 18016],
+        'distributor_server': ['10.142.0.4', 18017],
+        'receiver_server': ['10.142.0.4', 18018],
         'vm_name_filter': 'test-server',
         'storage_name_filter': 'test_server',
         'start_up_script': 'test_server.sh',
@@ -139,9 +139,9 @@ profile = {
         'vm_lifecycle': 25
     },
     'ad_hoc': {
-        'status_server': ['10.128.0.15', 11016],
-        'distributor_server': ['10.128.0.15', 11017],
-        'receiver_server': ['10.128.0.15', 11018],
+        'status_server': ['10.142.0.4', 11016],
+        'distributor_server': ['10.142.0.4', 11017],
+        'receiver_server': ['10.142.0.4', 11018],
         'vm_name_filter': 'ad-hoc',
         'storage_name_filter': 'ad_hoc',
         'start_up_script': 'ad_hoc.sh',
