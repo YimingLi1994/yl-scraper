@@ -3,7 +3,7 @@ profile = {
         'status_server': ['127.0.0.1', 10058],
         'distributor_server': ['127.0.0.1', 10059],
         'receiver_server': ['127.0.0.1', 10060],
-        'storage_name_filter': 'test_index',
+        'storage_name_filter': 'scraper_general',#'test_index',
         'distributor_key': 'aewrkjwearofikjwsewthewldamnmrykqwoaslxmnzvp40ekt85kj',
         'receiver_key': 'agwreaeg$KLZ!@}Kwthnwstrgarfga4',
         'statuskey': '23rafaerfargareg',
