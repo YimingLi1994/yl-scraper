@@ -293,7 +293,8 @@ def worker_index(job_queue, key, CONNECTINFO):
             finally:
                 driver.quit()
     finally:
-        vdisplay.stop()
+        if platform.system() in ('Linux',):
+            vdisplay.stop()
 
 
 def get_payload(connectinfo, distributor_key, job_queue, speed):
