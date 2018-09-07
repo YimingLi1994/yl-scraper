@@ -106,6 +106,7 @@ if __name__ == '__main__':
             workernum = sys.argv[3]
             shelllst = ['python', 'worker_server_no_proxy.py', chooseprofile, workernum]
             proc = sp.Popen(shelllst, shell=True)
+
             if sys.argv[2] == 'local-worker-only':
                 runserver = False
     if runserver is True:
