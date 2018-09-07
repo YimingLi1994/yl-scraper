@@ -1,8 +1,8 @@
 profile = {
     'test_index': {
-        'status_server': ['127.0.0.1', 10058],
-        'distributor_server': ['127.0.0.1', 10059],
-        'receiver_server': ['127.0.0.1', 10060],
+        'status_server': ['104.196.71.238', 20058],
+        'distributor_server': ['104.196.71.238', 20059],
+        'receiver_server': ['104.196.71.238', 20060],
         'storage_name_filter': 'test_index',
         'distributor_key': 'aewrkjwearofikjwsewthewldamnmrykqwoaslxmnzvp40ekt85kj',
         'receiver_key': 'agwreaeg$KLZ!@}Kwthnwstrgarfga4',

@@ -41,7 +41,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
     def handle(self):
         self.request.settimeout(2)
         self.data = self.request.recv(1024).strip().decode('ascii', 'ignore')
-        # print(self.data)
+        print(self.data)
         httplst = self.data.split(' ')
         if httplst[0] == 'GET' and len(httplst) >= 2:
             if self.server.crawl_key in httplst[1]:

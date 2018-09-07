@@ -65,9 +65,10 @@ def wrapper(res_queue: mp.Queue):
     ]
 
     publisher = pubsub_v1.PublisherClient()
-    topic_path = publisher.topic_path('yl3573', 'scraper_result')
+    topic_path = publisher.topic_path('yl3573-214601', 'scraper_result')
     while True:
         data=res_queue.get()
         datastr = jsonwrapper(data, succ_collst)
+        print("Sending")
         publish_messages(publisher, topic_path, datastr)
 

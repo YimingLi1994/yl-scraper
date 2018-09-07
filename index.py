@@ -14,7 +14,7 @@ import status_server
 import storage_fetch  # FETCH CSV FROM STORAGE
 import wrapper  # UPLOAD TO BIGQUERY
 from myprofile import profile as PROFILE
-
+import platform
 
 def main(chooseprofile, start_gcloud_worker):
     if chooseprofile not in PROFILE:
@@ -81,7 +81,7 @@ def main(chooseprofile, start_gcloud_worker):
         starttime = dt.datetime.now(pytz.timezone('America/Chicago')).replace(tzinfo=None)
         base = int(global_counter.value)
         time.sleep(30)
-        # print('Wait dict: '+str(len(wait_dict)) + ' ------ Ret dict: '+str(len(ret_dict)) + ' ---- uploadQueue: ' + str(upload_queue.qsize()))
+        print('Wait dict: '+str(len(wait_dict)) + ' ------ Ret dict: '+str(len(ret_dict)))# + ' ---- uploadQueue: ' + str(upload_queue.qsize()))
         endtime = dt.datetime.now(pytz.timezone('America/Chicago')).replace(tzinfo=None)
         secs = (endtime - starttime).seconds
         upper = int(global_counter.value)
@@ -104,9 +104,12 @@ if __name__ == '__main__':
             import subprocess as sp
 
             workernum = sys.argv[3]
-            shelllst = ['python', 'worker_server_no_proxy.py', chooseprofile, workernum]
-            proc = sp.Popen(shelllst, shell=True)
-
+            if platform.system() == 'Windows' or platform.system() == 'Linux':
+                shelllst = ['python', 'worker_job_index.py', chooseprofile, workernum]
+                proc = sp.Popen(shelllst, shell=True)
+            elif platform.system() == 'Darwin':
+                shelllst = ['python3', 'worker_job_index.py', chooseprofile, workernum]
+                proc = sp.Popen(shelllst)
             if sys.argv[2] == 'local-worker-only':
                 runserver = False
     if runserver is True:
