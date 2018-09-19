@@ -178,7 +178,7 @@ class ServerManager():
                 for idx in range(thisbatch):
                     namelst.append(
                         '{nameprefix}-{id}'.format(nameprefix=self.vm_name_filter, id=str(uuid.uuid4())[-6:]))
-                createstr = '''sudo gcloud compute instances create {machinename} --preemptible --zone {zone} --scopes https://www.googleapis.com/auth/cloud-platform --machine-type n1-standard-1 --image=scraperv3 --metadata-from-file startup-script={start_up_script} --project yl3573''' \
+                createstr = '''sudo gcloud compute instances create {machinename} --preemptible --zone {zone} --scopes https://www.googleapis.com/auth/cloud-platform --machine-type n1-standard-1 --image=crawler --metadata-from-file startup-script={start_up_script} --project yl3573''' \
                     .format(start_up_script='{}/{}'.format(os.path.dirname(os.path.abspath(__file__)),
                                                            self.startup_script),
                             machinename=' '.join(namelst), zone=thiszone)
